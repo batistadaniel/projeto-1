@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid de Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+        }
+
+        /* Cards */
+        .card {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: auto;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="background-color: #FF5733;">Card 1</div>
+        <div class="card" style="background-color: #33FF57;">Card 2</div>
+        <div class="card" style="background-color: #3357FF;">Card 3</div>
+        <div class="card" style="background-color: #FF33A6;">Card 4</div>
+        <div class="card" style="background-color: #A633FF;">Card 5</div>
+        <div class="card" style="background-color: #33FFF5;">Card 6</div>
+        <div class="card" style="background-color: #FF9633;">Card 7</div>
+        <div class="card" style="background-color: #9633FF;">Card 8</div>
+        <div class="card" style="background-color: #33FF96;">Card 9</div>
+    </div>
+</body>
+</html>
